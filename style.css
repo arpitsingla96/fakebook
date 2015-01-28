@@ -1,0 +1,107 @@
+.formdata{
+	padding: 35px ;
+	border: 0px ;
+	font-size: 24px ;
+	color: #9fa5ac ;
+}
+.para{
+	margin: 0px ;
+	color: #9fa5ac ;
+	font-size: 24px ;
+	padding: 0px 0px 0px 25px ;
+}
+.formdata th{
+	padding: 0px 25px 10px 25px ;
+}
+.formdata td{
+	padding: 0px 25px 10px 25px ;
+}
+.data{
+	position:absolute;
+	left:250px;
+	margin: 7px ;
+}
+
+.data1{
+	position:relative;
+	border: 4px solid ;
+	border-color: #303E4D ;
+	border-radius: 5px ;
+	margin: 7px ;
+}
+#pic{
+	display:block ;
+	float: left ;
+	width: 250px ;
+	height:250px ;
+	padding: 25px ;
+}
+.imgs{
+	padding:25px ;
+}
+body{
+	background-image: url("./files/back.jpg") ;
+	background-attachment: fixed ;
+	background-position: -50px ;
+	margin:0px ;
+}
+h1{
+	margin:0px ;
+	padding: 35px ;
+	border: 0px ;
+	font-size: 48px ;
+	color: white ;
+	text-align: center ;
+}
+h2{
+	margin:0px ;
+	padding: 35px ;
+	border: 0px ;
+	font-size: 36px ;
+	color: #9fa5ac ;
+}
+nav#left-bar{
+	position:fixed ;
+	display:block ;
+	background-color:#303E4D ;
+	color:#9fa5ac ;
+	float:left ;
+	width:250px ;
+	height:100% ;
+	font-size:28px ;
+	margin:0px ;
+	padding:0px ;
+	border:0px ;
+}
+#left-bar ul{
+	list-style-type:none ;
+	display:block ;
+	margin :0px ;
+	padding:0px ;
+}
+#left-bar ul li{
+	display:block ;
+}
+
+#left-bar ul li a{
+	display:block ;
+	background-color:#303E4D ;
+	color:#9fa5ac ;
+	font-size:28px ;
+	padding:25px 30px 25px 20px;
+	text-decoration:none ;
+}
+#left-bar ul li a:hover{
+	background-color:#4a5664 ;
+	color:#9fa5ac ;
+	text-decoration:none ;
+	border-radius:20px 20px 20px 20px ;
+}
+fieldset{
+color:#9fa5ac;
+font-weight: bold;
+font-size: 25px ;
+}
+fieldset input{
+border-radius: 5px;
+}
