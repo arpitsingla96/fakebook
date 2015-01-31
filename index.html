@@ -158,12 +158,31 @@
 			function time()
 			{
 				var d = new Date() ;
-				var months =  7 - d.getMonth()+1 ;
+				var months =  7 - d.getMonth() ;
 				var days =  27 - d.getDate() -1 ;
 				var hours = 24 - d.getHours() -1 ;
 				var mins = 60 - d.getMinutes() -1 ;
 				var seconds = 60 - d.getSeconds() -1 ;
 				var millisec = 1000 - d.getMilliseconds() ;
+				if(days<0)
+				{
+					months = months - 1 ;
+					if(d.getMonth()%2 == 0)
+					{
+						days = 31 + days ;
+					}
+					else
+					{
+						if(d.getMonth() == 1)
+						{
+							days = 28 + days ;
+						}
+						else
+						{
+							days = 30 + days ;
+						}
+					}
+				}
 				if(months%10 == months)
 					months = "0" + months ;
 				if(days%10 == days)
