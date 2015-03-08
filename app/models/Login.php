@@ -27,7 +27,8 @@
 			$row=$checkUser->fetch(\PDO::FETCH_ASSOC) ;
 			if($row)
 			{
-				if($row['password'] === $password)
+				$password_hash = sha1($password) ;
+				if($row['password_hash'] === $password_hash)
 				{
 					$_SESSION['status']=1;
 					$_SESSION['username'] = $row["username"] ;

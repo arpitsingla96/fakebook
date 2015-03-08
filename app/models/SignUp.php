@@ -30,10 +30,11 @@
 			}
 			else
 			{
-				$addUser = $db->prepare("INSERT INTO users (fullname , email , username , password) VALUES (:fullname , :email , :username , :password)") ;
+				$password_hash = sha1($password) ;
+				$addUser = $db->prepare("INSERT INTO users (fullname , email , username , password_hash) VALUES (:fullname , :email , :username , :password_hash)") ;
 				$row = $addUser->execute(array(
 					"username"=>$username,
-					"password"=>$password,
+					"password_hash"=>$password_hash,
 					"fullname"=>$fullname,
 					"email"=>$email
 					));
