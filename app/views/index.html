@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<title>
+			Fakebook-Welcome! Signup or Login!
+		</title>
+	</head>
+	<body>
+		<div class="top-login">
+		<h1>fakebook</h1>
+		<div>
+		<fieldset>
+			<legend><strong>Sign in!</strong></legend>
+			<form method="POST" action="/login">
+				<table>
+					<tr>
+					<td>Username</td>
+					<td>Password</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="text" name="username" autofocus/></td>
+					<td><input type="password" name="password" /></td>
+					<td class="submit"><input type="submit" name="submit" value="Login" /></td>
+					</tr>
+				</table>
+			</form>
+		</fieldset>
+		</div>
+		</div>
+		<div class = "sign-up" >
+		<fieldset>
+		<legend>Sign up!</legend>
+		<form method="POST" action="/signup">
+			<table class="formdata">
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="fullname" required /></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email" required/></td>
+				</tr>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username" required/></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" required/></td>
+				</tr>
+				<tr>
+					<td>Confirm password</td>
+					<td><input type="password" name="cpassword" required/></td>
+				</tr>
+				<tr>
+				<td colspan="2" class="pointer" style="text-align:center;"><input style="width:80px; height:30px;" type="submit" name ="submit" value="Signup" /></td>
+				</tr>
+			</table>
+		</form>
+		</fieldset>
+		</div>
+	</body>
+</html>

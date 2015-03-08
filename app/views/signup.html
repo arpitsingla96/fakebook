@@ -1,0 +1,49 @@
+<!doctype HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<title>
+		{{ title }}
+	</title>
+</head>
+<body>
+	<div class="top-login">
+	<h1>fakebook</h1>
+	</div>
+	<div class = "sign-up" >
+	<fieldset>
+	<legend>Sign up!</legend>
+	<form method="POST" action="/signup">
+		<table class="formdata">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="fullname" required autofocus/></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" name="email" required/></td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" required/></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" required/></td>
+			</tr>
+			<tr>
+				<td>Confirm password</td>
+				<td><input type="password" name="cpassword" required/></td>
+			</tr>
+			<tr>
+			<td class="submit" colspan="2" style="text-align:center;"><input style="width:80px; height:30px;" type="submit" name ="submit" value="Signup" /></td>
+			</tr>
+			<tr class="link">
+			<td colspan="2" ><span style="color:#41BC81"><strong>{{ error }}</strong> Please Sign up above or <a href="index.php">Login</a> to continue</span></td>
+			</tr>
+		</table>
+	</form>
+	</fieldset>
+	</div>
+</body>
+</html>

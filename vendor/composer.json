@@ -1,0 +1,13 @@
+{
+  "name" : "Blog",
+  "description": "Simple MVC based blog",
+  "keywords": ["mvc", "blog", "twig"],
+  "require": {
+    "torophp/torophp": "dev-master",
+    "twig/twig": "1.*"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+  }
+}

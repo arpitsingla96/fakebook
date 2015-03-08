@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+		<title>
+			{{ title }}
+		</title>
+	</head>
+	<body>
+		<div class="top-logged">
+			<h1>fakebook</h1>
+			<div>
+				<fieldset class="size_fieldset">
+					<legend><strong>{{fullname}}</strong></legend>
+					<form method="POST" action="/logout">
+						<table class="colour">
+							<tr>
+							<td><strong>Welcome <i>{{username}}</i> !</strong></td>
+							</tr>
+							<tr>
+							<td class="submit"><input type="submit" value="Logout" /></td>
+							</tr>
+						</table>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+		<nav id="left-bar">
+			<fieldset>
+				<legend>Share here!</legend>
+				<form id="ajax1">
+					<ul>
+						<li>Input your link here!</li>
+						<li id="share" ><textarea id="link" name="link" type="text" placeholder="Please prefix http:// or https://" autofocus></textarea> <br /></li>
+						<hr/><li>Description</li>
+						<li id="desc" ><textarea id="description" type="text" name="description" placeholder="Add description of your link" required ></textarea><br /></li>
+						<li style="text-align:center ;"><input type ="submit" name="submit" value="Share" /></li>
+					</ul>
+				</form>
+			</fieldset>
+		</nav>
+
+<!-- Main Body Of Posts Page
+Main Body Of Posts Page
+Main Body Of Posts Page
+Main Body Of Posts Page
+Main Body Of Posts Page
+Main Body Of Posts Page -->
+
+		<div id="body">
+			{% for post in all_posts %}
+				<div class="posts">
+					<div class="header">
+						<span class="username"><i>{{ post.username }}</i></span><span class="time"><kbd>{{ post.time }}</kbd></span>
+					</div>
+					<div class="footer">
+						<a href="{{ post.post }}" target='_blank'>
+							<div class="footer-link">{{ post.description }}</div>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+
+<!-- Main Body Of Posts Page Ends
+Main Body Of Posts Page Ends
+Main Body Of Posts Page Ends
+Main Body Of Posts Page Ends
+Main Body Of Posts Page Ends
+Main Body Of Posts Page Ends -->
+
+										<script src="jquery.js"></script>
+										<script>
+											$("#ajax1").submit(function(event){
+												event.preventDefault();
+												var d = {
+													link: $('#link').val(),
+													description: $('#description').val(),
+													submit: "submit"
+												} ;
+												$.ajax({
+													url: "/newpost",
+													type: "POST",
+													data: d,
+													datatype: 'json',
+													success: function(data){
+														var str = '<div class="posts"><div class="header"><span class="username"><i>' ;
+														str += {{ username }} ;
+														str += '</i></span><span class="time"><kbd>' ;
+														str += {{ time }} ;
+														str += '</kbd></span></div><div class="footer"><a href="' ;
+														str += {{ post }} ;
+														str += '" target=\'_blank\'><div class="footer-link"> ' ;
+														str += {{ description }} ;
+														str += '</div></a></div>' ;
+														$("#body").prepend(str) ;
+														$('#link').val('') ;
+														$('#description').val('') ;
+													}
+												}) ;
+											});
+										</script>
+	</body>
+</html>

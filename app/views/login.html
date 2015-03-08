@@ -1,0 +1,36 @@
+<!doctype HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<title>
+		{{ title }}
+	</title>
+</head>
+<body>
+	<div class="top-login">
+	<h1>fakebook</h1>
+	<div>
+	<fieldset class="size_fieldset">
+		<legend><strong>Sign in!</strong></legend>
+		<form method="POST" action="/login">
+			<table class="colour">
+				<tr>
+				<td>Username</td>
+				<td>Password</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td><input type="text" name="username" autofocus /></td>
+				<td><input type="password" name="password" /></td>
+				<td class="submit"><input type="submit" name="submit"value="login" /></td>
+				</tr>
+				<tr>
+				<td colspan="3"><strong><span style="color:#FF9900">{{ error }}</span></strong> <br/>Please Login above OR <a href="index.php" >Sign up</a> to continue.</td>
+				</tr>
+			</table>
+		</form>
+	</fieldset>
+	</div>
+	</div>
+	</body>
+</html>
