@@ -11,8 +11,8 @@
 
 		public static function getDB()
 		{
-			include "../config/credentials.php" ;
-			return new \PDO("mysql:db_name=".$db_connect['db_name'].";host=".$db_connect['server'] , $db_connect['username'] , $db_connect['password']) ;
+			include __DIR__."/../../configs/credentials.php" ;
+			return new \PDO("mysql:dbname=".$db_connect['db_name'].";host=".$db_connect['server'] , $db_connect['username'] , $db_connect['password']) ;
 		}
 
 		public static function checkAndAddUser($username , $password , $fullname , $email)

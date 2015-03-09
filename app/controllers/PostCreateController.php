@@ -13,7 +13,7 @@
 			$this->twig = new \Twig_Environment($loader) ;
 		}
 
-		public function newPostRequest()
+		public function post()
 		{
 			session_start() ;
 
@@ -31,7 +31,7 @@
 				}
 				else
 				{
-					header('Location : /posts')
+					header('Location: /posts') ;
 				}
 			}
 			else

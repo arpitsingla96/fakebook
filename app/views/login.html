@@ -1,7 +1,13 @@
 <!doctype HTML>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+<script>
+	if({{ error }} != "")
+		$('#error').style.display="" ;
+</script>
+
+<link rel="stylesheet" type="text/css" href="/css/index.css">
 	<title>
 		{{ title }}
 	</title>
@@ -24,7 +30,7 @@
 				<td><input type="password" name="password" /></td>
 				<td class="submit"><input type="submit" name="submit"value="login" /></td>
 				</tr>
-				<tr>
+				<tr id="error">
 				<td colspan="3"><strong><span style="color:#FF9900">{{ error }}</span></strong> <br/>Please Login above OR <a href="index.php" >Sign up</a> to continue.</td>
 				</tr>
 			</table>

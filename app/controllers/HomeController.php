@@ -13,13 +13,20 @@
 			$this->twig = new \Twig_Environment($loader) ;
 		}
 
-			// $_SERVER['REQUEST_METHOD']
 		public function get()
 		{
 			if(isset($_SESSION['status']) && $_SESSION['status']==1)
 			{
-				header('Location : /posts')
+				header('Location : /posts') ;
+				error_log("hi") ;
+			}
+			else
+			{
+				//header('Location:localhost/Projects/php-selfhost') ;
+				echo $this->twig->render("index.html", array(
+					"title" => "SignUp | Login")) ;
+				error_log("hi1") ;
 			}
 		}
-	} ;
+	}
 ?>

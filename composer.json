@@ -1,7 +1,7 @@
 {
 	"name":"Fakebook",
-	"desciption":"Simple MVC based link sharer app",
-	"required":{
+	"description":"Simple MVC based link sharer app",
+	"require":{
 		"torophp/torophp":	"dev-master",
 		"twig/twig":"1.*"
 	},

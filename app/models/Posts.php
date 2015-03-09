@@ -1,6 +1,6 @@
 <?php
 
-	use namespace Models ;
+	namespace Models ;
 
 	class Posts
 	{
@@ -12,7 +12,7 @@
 
 		public static function getDB()
 		{
-			include "../config/credentials.php" ;
+			include __DIR__."/../../configs/credentials.php" ;
 			return new \PDO("mysql:dbname=" . $db_connect['db_name'] . ";host=" . $db_connect['server'] , $db_connect['username'] , $db_connect['password']) ;
 		}
 
@@ -30,14 +30,19 @@
 				"post"=>$post,
 				"description"=>$description
 				)) ;
+
 			if($result)
 			{
-				self::displayNewPost($post,$description) ;
+				$new_post = self::displayNewPost($post,$description) ;
+				return $new_post ;
 			}
 		}
 
 		public static function displayNewPost($post,$description)
 		{
+
+			$db = self::getDB() ;
+
 			$username = $_SESSION['username'] ;
 			$email = $_SESSION['email'] ;
 
@@ -48,7 +53,7 @@
 				)) ;
 			if($result)
 			{
-				$new_post=$result->fetch(\PDO::FETCH_ASSOC) ;
+				$new_post=$getTimeForPost->fetch(\PDO::FETCH_ASSOC) ;
 				$new_post['post'] = $post ;
 				$new_post['description'] = $description ;
 				$new_post['username'] = $username ;
@@ -59,6 +64,8 @@
 
 		public static function displayAllPosts()
 		{
+			$db = self::getDB() ;
+
 			$get_all_posts = $db->prepare("SELECT * FROM posts ORDER BY time DESC") ;
 			$get_all_posts->execute() ;
 			$all_posts = array() ;

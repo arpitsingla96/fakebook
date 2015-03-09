@@ -3,7 +3,7 @@
 	namespace Controllers ;
 	use Models\Posts ;
 
-	class PostDisplayControllers
+	class PostDisplayController
 	{
 		protected $twig ;
 
@@ -13,25 +13,27 @@
 			$this->twig = new \Twig_Environment($loader) ;
 		}
 
-		public function allPostsRequest()
+		public function get()
 		{
-			if(isset($_SESSION['status']) && $_SESSION['status'] == 1)
+			session_start() ;
+			if(isset($_SESSION['status']) && $_SESSION['status']=="1")
 			{
 				$username = $_SESSION['username'] ;
 				$fullname = $_SESSION['fullname'] ;
 				$all_posts = array() ;
 				$all_posts = Posts::displayAllPosts() ;
-				$this->twig->render("posts.html" , array(
+				echo $this->twig->render("posts.html" , array(
 					"all_posts" => $all_posts,
 					"username" => $username,
 					"fullname" => $fullname,
-					"title" => $title
+					"title" => "Posts"
 					)) ;
 			}
 			else
 			{
-				$this->twig->render("login.html" , array(
-					"error" => "Please login to Continue"
+				echo $this->twig->render("login.html" , array(
+					"error" => "Please login to Continue" ,
+					"title" => "Login"
 					)) ;
 			}
 		}

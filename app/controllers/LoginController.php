@@ -1,7 +1,7 @@
 <?php
 
 	namespace Controllers ;
-	use Models/Login ;
+	use Models\Login ;
 
 	class LoginController
 	{
@@ -10,23 +10,23 @@
 		public function __construct()
 		{
 			$loader = new \Twig_Loader_Filesystem(__DIR__ . "/../views") ;
-			$this->twig = new Twig_Environment($loader) ;
+			$this->twig = new \Twig_Environment($loader) ;
 		}
 
-		public function loginRequest()
+		public function post()
 		{
 			session_start() ;
 
 			if(isset($_SESSION['status']) && $_SESSION['status']==1)
 			{
-				header('Location : /posts')
+				header('Location: /posts') ;
 			}
 			else
 			{
 				if(!isset($_POST['username']) || !isset($_POST['password']))
 				{
 					$this->twig->render("login.html", array(
-						"title"=>"Fakebook | Login"
+						"title"=>"Fakebook | Login",
 						"error" => "Please fill up all fields"
 						)) ;
 				}
@@ -34,10 +34,11 @@
 				{
 					$username=$_POST['username'] ;
 					$password=$_POST['password'] ;
+					$error="" ;
 					$result=Login::authenticate($username,$password) ;
 					if($result==0)
 					{
-						header('Location : /posts') ;
+						header('Location: /posts') ;
 					}
 					else if($result==1)
 					{
@@ -47,10 +48,10 @@
 					{
 						$error = "Incorrect password.." ;
 					}
-					if($error)
+					if($error!="")
 					{
 						echo $this->twig->render("login.html" , array(
-							"title"=>"Fakebook | Login"
+							"title"=>"Fakebook | Login",
 							"error"=>$error
 							)) ;
 					}

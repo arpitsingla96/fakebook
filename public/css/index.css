@@ -1,0 +1,294 @@
+body{
+	background-image: url("../images/back.jpg") ;
+	background-attachment: fixed ;
+	background-position: -50px ;
+	margin:0px ;
+}
+fieldset{
+	border-radius: 7px ;
+}
+legend{
+	color:#777777;
+}
+.top-login{
+	width:100%;
+	height:102px;
+	position: fixed ;
+	margin: 0px;
+	border: 0px;
+	padding : 10px 160px;
+	background-color: #303E4D;
+	z-index: 1;
+}
+.top-login h1{
+	color: #9fa5ac;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif ;
+	font-weight: bold ;
+	font-size: 36px;
+}
+.top-login div{
+	display: block ;
+	float: right;
+	font-size: 14px;
+	color: #9fa5ac;
+	text-align:left;
+	position: absolute;
+	right: 480px;
+	top: 10px;
+}
+.top-login legend{
+	font-size:16px;
+	font-weight: bold;
+}
+.top-login input{
+	border-radius: 5px;
+	width: 150px;
+}
+.top-login td{
+	padding: 1px 7px;
+}
+.submit input{
+	width: 50px;
+}
+.submit input:hover{
+	cursor: pointer; cursor: hand;
+}
+.sign-up{
+	position: absolute;
+	width:50%;
+	left:25%;
+	height: 50%;
+	bottom: 25%;
+}
+.sign-up legend{
+	font-size: 36px;
+}
+.formdata{
+	padding: 35px ;
+	border: 0px ;
+	font-size: 24px ;
+	color: #9fa5ac ;
+}
+.formdata td{
+	padding: 0px 25px 10px 25px ;
+}
+.formdata input{
+	height: 30px;
+	width: 250px;
+	border-radius: 7px ;
+}
+.size_fieldset{
+	height: 92px;
+}
+.colour tr td{
+	color: #9fa5ac;
+}
+.colour tr td a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold ;
+}
+.colour tr td a:hover{
+	color: gray;
+	text-decoration: none;
+	font-weight: lighter; ;
+}
+.link td a{
+	color: #6A8CE9;
+	text-decoration: none;
+	font-weight: bold ;
+}
+.link td a:hover{
+	color: #07B3D3;
+	text-decoration: none;
+	font-weight: lighter;
+}
+nav#left-bar{
+	position:fixed ;
+	display:block ;
+	background-color:#303E4D ;
+	color:#9fa5ac ;
+	float:right ;
+	top: 122px;
+	right: 0px;
+	width:23%;
+	height:100% ;
+	margin:0px ;
+	padding:0px ;
+	border:0px ;
+}
+#left-bar fieldset{
+	margin:1.7%;
+	padding:3.3%;
+	height: 75%;
+}
+#left-bar fieldset legend{
+	font-size: 25px ;
+	font-weight: bold ;
+}
+#left-bar input{
+	border-radius: 5px ;
+	height: 40px;
+	width: 150px;
+	margin: 15px;
+	padding: 5px;
+	font-size: 24px;
+	background-color: #07B3D3;
+	color: #444444;
+	border-color: #07B3D3;
+}
+#left-bar input:hover{
+	cursor: pointer; cursor: hand;
+}
+
+#left-bar ul{
+	list-style-type:none ;
+	display:block ;
+	margin :0px ;
+	padding:0px ;
+}
+#left-bar ul li{
+	display:block ;
+	margin-left: 3%;
+	margin-right: 3%;
+	font-weight: bold;
+	padding: 0;
+	border: 0;
+}
+#desc textarea{
+	height: 200px;
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	border-radius:5px; 
+	margin:10px 0px;
+	padding:10px 3.33%;
+	width: 90%;
+	border:0;
+}
+#share{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+#share textarea{
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	border-radius:5px; 
+	margin:10px 0px;
+	padding:10px 3.33%;
+	width: 90%;
+	border:0;
+	height: 50px;
+}
+.pointer input{
+	cursor: pointer; cursor: hand;
+}
+#logout input{
+	cursor: pointer; cursor: hand;
+	z-index: +1 ;
+	width: 60px;
+	margin-top: 30px;
+}
+.top-logged{
+	width:100%;
+	height:102px;
+	position: fixed ;
+	margin: 0px;
+	border: 0px;
+	padding : 10px 160px;
+	background-color: #303E4D;
+	z-index:1;
+}
+.top-logged h1{
+	color: #9fa5ac;
+	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif ;
+	font-weight: bold ;
+	font-size: 36px;
+}
+.top-logged div{
+	display: block ;
+	float: right;
+	font-size: 14px;
+	color: #9fa5ac;
+	text-align:left;
+	position: absolute;
+	right: 480px;
+	top: 10px;
+}
+.top-logged legend{
+	font-size:16px;
+	font-weight: bold;
+}
+.top-logged td{
+	padding: 1px 7px;
+	font-size: 25px;
+	text-align: center;
+	padding: 5px;
+}
+.top-logged fieldset{
+	height: 80px;
+}
+#body{	
+	position: absolute;
+	top: 150px;
+	left: 8% ;
+	margin: 0px;
+	width: 61% ;
+}
+.posts{
+	margin: 20px ;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	box-shadow: 0 2px 3px 0 ;
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease ;
+	transition-delay: initial;
+}
+.header{
+	margin: 0px;
+	padding: 6px 0px 5px 10px ;
+	background-color: #c8c8c8;
+	font-size: 20px ;
+	height: 30px;
+}
+.footer{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.footer-link{
+	margin: 0px;
+	padding: 10px 15px 10px 15px ;
+	font-size: 16px ;
+	height: 100%;
+	word-wrap: break-word;
+	background-color: #e8e8e8;
+    -o-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -khtml-transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -ms-transition: all 2s linear;
+    transition: all 2s linear;
+}
+.footer a{
+	text-decoration: none;
+	color: #333333;
+}
+.footer a:hover div{
+	background-color: #333333;
+	color: #e8e8e8;
+}
+.username{
+	display: float;
+	float: left ;
+	margin: 3px 0px 0px 10px;
+}
+.time{
+	display: float;
+	float: right;
+	margin: 8px 15px 0px 0px;
+	font-size: 12px;
+}

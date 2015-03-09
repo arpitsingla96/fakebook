@@ -1,7 +1,13 @@
 <!doctype HTML>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+<script>
+	if({{ error }} != "")
+		$('#error').style.display="" ;
+</script>
+
+<link rel="stylesheet" type="text/css" href="/css/index.css">
 	<title>
 		{{ title }}
 	</title>
@@ -38,7 +44,7 @@
 			<tr>
 			<td class="submit" colspan="2" style="text-align:center;"><input style="width:80px; height:30px;" type="submit" name ="submit" value="Signup" /></td>
 			</tr>
-			<tr class="link">
+			<tr class="link" id="error">
 			<td colspan="2" ><span style="color:#41BC81"><strong>{{ error }}</strong> Please Sign up above or <a href="index.php">Login</a> to continue</span></td>
 			</tr>
 		</table>

@@ -9,10 +9,10 @@
 		public function __construct()
 		{
 			$loader = new \Twig_Loader_Filesystem(__DIR__ . "/../views") ;
-			$this->twig = new Twig_Environment($loader) ;
+			$this->twig = new \Twig_Environment($loader) ;
 		}
 
-		public function logoutRequest()
+		public function post()
 		{
 			session_unset();
 			session_destroy();
