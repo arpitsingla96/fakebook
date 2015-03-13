@@ -15,17 +15,16 @@
 
 		public function get()
 		{
+			session_start() ;
 			if(isset($_SESSION['status']) && $_SESSION['status']==1)
 			{
-				header('Location : /posts') ;
-				error_log("hi") ;
+				header('Location: /posts') ;
 			}
 			else
 			{
 				//header('Location:localhost/Projects/php-selfhost') ;
 				echo $this->twig->render("index.html", array(
 					"title" => "SignUp | Login")) ;
-				error_log("hi1") ;
 			}
 		}
 	}
