@@ -22,7 +22,6 @@
 			}
 			else
 			{
-				//header('Location:localhost/Projects/php-selfhost') ;
 				echo $this->twig->render("index.html", array(
 					"title" => "SignUp | Login")) ;
 			}
