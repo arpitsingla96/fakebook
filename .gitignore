@@ -1,2 +1,3 @@
 configs/credentials.php
-vendor
+vendor/
+
