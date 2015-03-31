@@ -13,18 +13,18 @@
 			$this->twig = new \Twig_Environment($loader) ;
 		}
 
-		public function post()
+		public function get()
 		{
 			session_start() ;
 
 			if(isset($_SESSION['status']) && $_SESSION['status'] == 1)
 			{
-				if(isset($_POST['link']) && isset($_POST['description']) && $_POST['link']!="" && $_POST['description']!="")
+				if(isset($_GET['link']) && isset($_GET['description']) && $_GET['link']!="" && $_GET['description']!="")
 				{
 					$username = $_SESSION['username'] ;
 					$email = $_SESSION['email'] ;
-					$post = $_POST['link'] ;
-					$description = $_POST['description'] ;
+					$post = $_GET['link'] ;
+					$description = $_GET['description'] ;
 					$new_post = array() ;
 					$new_post = Posts::insertNewPost($post,$description) ;
 					echo json_encode($new_post) ;
