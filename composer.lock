@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/anandkunal/ToroPHP.git",
-                "reference": "1addae4742241c20a9e8b390baa4ee81c2c972ae"
+                "reference": "4e5f5388b2967754cbf57079acccdbac7467160b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anandkunal/ToroPHP/zipball/1addae4742241c20a9e8b390baa4ee81c2c972ae",
-                "reference": "1addae4742241c20a9e8b390baa4ee81c2c972ae",
+                "url": "https://api.github.com/repos/anandkunal/ToroPHP/zipball/4e5f5388b2967754cbf57079acccdbac7467160b",
+                "reference": "4e5f5388b2967754cbf57079acccdbac7467160b",
                 "shasum": ""
             },
             "require": {
@@ -79,24 +79,24 @@
                 "php",
                 "router"
             ],
-            "time": "2015-02-19 14:37:11"
+            "time": "2015-04-15 21:01:31"
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf"
+                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4cf7464348e7f9893a93f7096a90b73722be99cf",
-                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9f70492f44398e276d1b81c1b43adfe6751c7b7f",
+                "reference": "9f70492f44398e276d1b81c1b43adfe6751c7b7f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.4"
+                "php": ">=5.2.7"
             },
             "type": "library",
             "extra": {
@@ -136,7 +136,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-25 17:32:08"
+            "time": "2015-04-19 08:30:27"
         }
     ],
     "packages-dev": [],
